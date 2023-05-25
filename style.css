@@ -1,0 +1,184 @@
+.attribution { 
+    margin: 0 auto;
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+  }
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;  
+
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    background-color: var(--clr-200-white);
+}
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+#root, #__next {
+    isolation: isolate;
+}
+input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+:root {
+    --clr-complimantary-700: hsl(259, 100%, 65%);
+    --clr-red-500: hsl(0, 100%, 67%);
+
+    --clr-100-white: hsl(0, 0%, 100%);
+    --clr-200-white: hsl(0, 0%, 94%);
+    --clr-100-grey: hsl(0, 0%, 86%);
+    --clr-500-grey: hsl(0, 1%, 44%);
+    --clr-700-black: hsl(0, 0%, 8%);
+
+    --fs-inputs: 32px;
+    --ff-text: 'Poppins', sans-serif;
+    --fw-400i: 400;
+    --fw-700: 700;
+    --fw-800i: 800; 
+}
+
+.container {
+    margin: 100px auto 0;
+    width: 90%;
+    max-width: 864px;
+    height: 600px;
+    padding: 4rem 2rem;
+
+    background-color: var(--clr-100-white);
+    border-radius: 2rem 2rem 10rem 2rem;
+    box-shadow: 0px 0px 5px 0px var(--clr-100-grey);
+}
+.inputs {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--clr-100-grey);
+    position: relative;
+    margin-bottom: 3rem;
+}
+.inputSection {
+    max-width: 8rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+.inputSection label {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-family: var(--ff-text);
+    font-weight: var(--fw-400i);
+    color: var(--clr-500-grey);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.inputSection input {
+    background-color: var(--clr-100-white);
+    color: var(--clr-700-black);
+    border: 1px solid var(--clr-100-grey);
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    width: 100%;
+    font-size: 1.3rem;
+    font-family: var(--ff-text);
+    font-weight: var(--fw-700);
+    margin-bottom: 0.2rem;
+}
+.inputSection input::placeholder {
+    color: var(--clr-100-grey);
+}
+.inputSection input:focus {
+    border: 1px solid var(--clr-complimantary-700);
+    outline: 0;
+}
+#arrow {
+    cursor: pointer;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    height: 4.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    background-color: var(--clr-complimantary-700);
+    padding: 0 1.5rem;
+    position: absolute;
+    bottom: -2.2rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: 100ms;
+}
+
+#arrow:focus, #arrow:hover {
+    background-color: var(--clr-700-black);
+}
+.result {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    font-size: clamp(3rem, 10vw , 5.5rem);
+    line-height: clamp(1.2, 1.4, 1.5);
+    font-family: var(--ff-text);
+    font-weight: var(--fw-800i);
+}
+.result div span {
+    color: var(--clr-complimantary-700);
+}
+
+@media (min-width: 768px) {
+    body {
+        align-items: center;
+    }
+    .container {
+        margin: 0 auto;
+    }
+    #arrow {
+        left: 100%;
+        transform: translate(-100%, 0);
+    }
+    .inputs {
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+    }
+    .inputSection {
+        margin-left: 1rem;
+    }
+}
+.inputSection span {
+    color: var(--clr-red-500);
+    font-family: var(--ff-text);
+    font-weight: var(--fw-400i);
+    font-size: 0.75rem;
+}
